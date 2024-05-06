@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" href="node.js">
+    <title>Desayunos Sorpresa</title>
+</head>
+<body>
+    
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href=""><img src="logo-pagina.png"alt=""></a>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#inicio" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#servicio" class="nav__links">Productos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#nosotros" class="nav__links">Sobre nosotros</a>
+                </li>
+                
+               
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+       
+            <section class="hero__container container" id="inicio">
+            <h1 class="hero__title">Mundo Sorpresa</h1>
+            <p class="hero__paragraph">Elige tu mejor opcion  ya!</p>
+            <a href="register" class="cta">Contactanos</a>
+        </section>
+    </header>
+    
+    <section class="filters">
+        
+    </section>
+
+    <section class="product-registration">
+        <h2>Registra Tu Producto</h2>
+        <form id="productForm">
+            
+            <label for="productName">Nombre:</label>
+            <input type="text" id="productName" required>
+
+            <button onclick="Limpiar()">Limpiar</button>
+            <button type="button" onclick="registerProduct()">Registrar</button>
+            <p id="mensaje"></p>
+    <p id="resultado"></p>
+        </form>
+    </section>
+
+    
+
+    <section class="product-list">
+        <h2>Listas De Productos</h2>
+        <ul id="productList">
+
+            
+        </ul>
+        <div id="pagination">
+            
+        </div>
+    </section>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="Imagen artesanal.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Con Florero</p>
+                    <span class="precio">$ 19.300</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="Imagen alegrias.jpg" alt="">
+                    </div>
+                    <p class="descripcion" id>Con Globo</p>
+                    <span class="precio">$ 24.800</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="Imagen love.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Muchas Rosas y Mas
+                    </p>
+                    <span class="precio">$ 30.600</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="Imagen peluche.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Genial Peluche + Caja</p>
+                    <span class="precio">$ 36.800</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="imagen maleta.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Con maleta Hombre</p>
+                    <span class="precio">$ 55.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="imagen bolso.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Con Bolso Para Mujer</p>
+                    <span class="precio">$ 60.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="Imagen tamal.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Elegante Valluno + Cerveza</p>
+                    <span class="precio">$ 60.500</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="imegan tematica.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Para El Aficionado</p>
+                    <span class="precio">$ 70.800</span>
+                </div>
+            </div> 
+       
+    </section>
+
+    <section class="confirmation-dialog" id="confirmationDialog">
+        <p>Mensaje de confirmación</p>
+        <button onclick="cancelDeletion()">Cancelar</button>
+        <button onclick="deleteProduct()" style="background-color: red;">Eliminar</button>
+    </section>
+
+    <script src="node.js"></script>
+</body>
+</html>
